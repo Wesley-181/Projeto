@@ -1,78 +1,53 @@
-# Owl Carousel 2
+##New version 2.0.0-beta now available for testers. [Check it](http://www.owlgraphic.com/owlcarousel2/)
 
-Touch enabled [jQuery](https://jquery.com/) plugin that lets you create a beautiful, responsive carousel slider. **To get started, check out https://owlcarousel2.github.io/OwlCarousel2/.**
+### OwlCarousel ###
+>v.1.3.3
 
-**Notice:** The old Owl Carousel site (owlgraphic [dot] com) is no longer in use. Please delete all references to this in bookmarks and your own products' documentation as it's being used for malicious purposes.
+Touch enabled jQuery plugin that lets you create beautiful responsive carousel slider.
+[Visit Owl Carousel landing page](http://owlgraphic.com/owlcarousel)
 
-## Quick start
+###Features:
+* Responsive
+* Touch Events
+* Mouse Slide Events
+* Fully Customizable
+* Choose the number of items to be displayed
+* Multiple Sliders
+* CSS3 3d Transitions
+* Custimizable controls
+* JSON 
+* Custom events
+* Helpful callbacks
 
-### Install
+> Tested on IE7, IE8, IE9, IE10, Chrome, Safari, Firefox, Opera, iPhone, iPad, Chrom on Google Nexus.
 
-This package can be installed with:
 
-- [npm](https://www.npmjs.com/package/owl.carousel): `npm install --save owl.carousel` or `yarn add owl.carousel jquery`
-- [bower](http://bower.io/search/?q=owl.carousel): `bower install --save owl.carousel`
+### More Demos
+See what Owl can do:
+* [With auto scaling images](http://owlgraphic.com/owlcarousel/demos/images.html)
+* [Full Width](http://owlgraphic.com/owlcarousel/demos/full.html)
+* [Custom Widths](http://owlgraphic.com/owlcarousel/demos/custom.html)
+* [One Item](http://owlgraphic.com/owlcarousel/demos/one.html)
+* [More demos](http://owlgraphic.com/owlcarousel/#more-demos)
 
-Or download the [latest release](https://github.com/OwlCarousel2/OwlCarousel2/releases).
-
-### Load
-
-#### Webpack
-
-Add jQuery via the "webpack.ProvidePlugin" to your webpack configuration:
-    
-    const webpack = require('webpack');
-    
-    //...
-    plugins: [
-        new webpack.ProvidePlugin({
-          $: 'jquery',
-          jQuery: 'jquery',
-          'window.jQuery': 'jquery'
-        }),
-    ],
-    //...
-
-Load the required stylesheet and JS:
-
-```js
-import 'owl.carousel/dist/assets/owl.carousel.css';
-import 'owl.carousel';
-```
-
-#### Static HTML
-
-Put the required stylesheet at the [top](https://developer.yahoo.com/performance/rules.html#css_top) of your markup:
+### 1.Getting Started
+Load jQuery(1.7+) and include Owl Carousel plugin files
 
 ```html
-<link rel="stylesheet" href="/node_modules/owl.carousel/dist/assets/owl.carousel.min.css" />
+<!-- Basic stylesheet -->
+<link rel="stylesheet" href="owl-carousel/owl.carousel.css">
+ 
+ <!-- Default Theme -->
+<link rel="stylesheet" href="owl-carousel/owl.theme.css">
+ 
+<!-- Include js plugin -->
+<script src="owl-carousel/owl.carousel.js"></script>
 ```
+### 2.Set up your HTML
+You don't need any special markup. All you need is to wrap your divs inside the container element <div class="owl-carousel">. Class "owl-carousel" is mandatory to apply proper styles that come from owl.carousel.css file.
 
 ```html
-<link rel="stylesheet" href="/bower_components/owl.carousel/dist/assets/owl.carousel.min.css" />
-```
-
-**NOTE:** If you want to use the default navigation styles, you will also need to include `owl.theme.default.css`.
-
-
-Put the script at the [bottom](https://developer.yahoo.com/performance/rules.html#js_bottom) of your markup right after jQuery:
-
-```html
-<script src="/node_modules/jquery/dist/jquery.js"></script>
-<script src="/node_modules/owl.carousel/dist/owl.carousel.min.js"></script>
-```
-
-```html
-<script src="/bower_components/jquery/dist/jquery.js"></script>
-<script src="/bower_components/owl.carousel/dist/owl.carousel.min.js"></script>
-```
-
-### Usage
-
-Wrap your items (`div`, `a`, `img`, `span`, `li` etc.) with a container element (`div`, `ul` etc.). Only the class `owl-carousel` is mandatory to apply proper styles:
-
-```html
-<div class="owl-carousel owl-theme">
+<div class="owl-carousel">
   <div> Your Content </div>
   <div> Your Content </div>
   <div> Your Content </div>
@@ -80,43 +55,20 @@ Wrap your items (`div`, `a`, `img`, `span`, `li` etc.) with a container element 
   <div> Your Content </div>
   <div> Your Content </div>
   <div> Your Content </div>
+  ...
 </div>
 ```
-**NOTE:** The `owl-theme` class is optional, but without it, you will need to style navigation features on your own.
+### 3.Call the plugin
+Now call the Owl initializer function and your carousel is ready.
 
-
-Call the [plugin](https://learn.jquery.com/plugins/) function and your carousel is ready.
-
-```javascript
-$(document).ready(function(){
-  $('.owl-carousel').owlCarousel();
-});
+```html
+$(".owl-carousel").owlCarousel();
 ```
-
-## Documentation
-
-The documentation, included in this repo in the root directory, is built with [Assemble](http://assemble.io/) and publicly available at https://owlcarousel2.github.io/OwlCarousel2/. The documentation may also be run locally.
-
-## Building
-
-This package comes with [Grunt](http://gruntjs.com/) and [Bower](http://bower.io/). The following tasks are available:
-
-  * `default` compiles the CSS and JS into `/dist` and builds the doc.
-  * `dist` compiles the CSS and JS into `/dist` only.
-  * `watch` watches source files and builds them automatically whenever you save.
-  * `test` runs [JSHint](http://www.jshint.com/) and [QUnit](http://qunitjs.com/) tests headlessly in [PhantomJS](http://phantomjs.org/).
-
-To define which plugins are build into the distribution just edit `/_config.json` to fit your needs.
-
-## Contributing
-
-Please read [CONTRIBUTING.md](CONTRIBUTING.md).
-
-## Roadmap
-
-Please make sure to check out our [Roadmap Discussion](https://github.com/OwlCarousel2/OwlCarousel2/issues/1756).
+### 4. For more details visit [OwlCarousel landing page](http://owlgraphic.com/owlcarousel)
+##### Changelog available [here](http://owlgraphic.com/owlcarousel/changelog.html)
 
 
-## License
 
-The code and the documentation are released under the [MIT License](LICENSE).
+License
+------------
+The MIT License (MIT)
